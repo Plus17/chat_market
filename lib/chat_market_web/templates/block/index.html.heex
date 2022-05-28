@@ -1,0 +1,28 @@
+<h1>Listing Blocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start at</th>
+      <th>End at</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for block <- @blocks do %>
+    <tr>
+      <td><%= block.start_at %></td>
+      <td><%= block.end_at %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.block_path(@conn, :show, block) %></span>
+        <span><%= link "Edit", to: Routes.block_path(@conn, :edit, block) %></span>
+        <span><%= link "Delete", to: Routes.block_path(@conn, :delete, block), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Block", to: Routes.block_path(@conn, :new) %></span>

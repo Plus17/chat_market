@@ -1,0 +1,18 @@
+<h1>Show Block</h1>
+
+<ul>
+
+  <li>
+    <strong>Start at:</strong>
+    <%= @block.start_at %>
+  </li>
+
+  <li>
+    <strong>End at:</strong>
+    <%= @block.end_at %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.block_path(@conn, :edit, @block) %></span> |
+<span><%= link "Back", to: Routes.block_path(@conn, :index) %></span>

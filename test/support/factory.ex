@@ -9,4 +9,5 @@ defmodule ChatMarket.Factory do
   def unique_user_email, do: "user#{System.unique_integer()}@example.com"
 
   use ChatMarket.UserFactory
+  use ChatMarket.BlockFactory
 end
