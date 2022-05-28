@@ -7,14 +7,14 @@
 # General application configuration
 import Config
 
-config :app_name,
-  ecto_repos: [AppName.Repo],
+config :chat_market,
+  ecto_repos: [ChatMarket.Repo],
   generators: [binary_id: true]
 
 # Configures the endpoint
-config :app_name, AppNameWeb.Endpoint,
-  render_errors: [view: AppNameWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: AppName.PubSub,
+config :chat_market, ChatMarketWeb.Endpoint,
+  render_errors: [view: ChatMarketWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: ChatMarket.PubSub,
   live_view: [signing_salt: "ePqBlGTf"]
 
 # Configures the mailer
@@ -24,7 +24,7 @@ config :app_name, AppNameWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :app_name, AppName.Mailer, adapter: Swoosh.Adapters.Local
+config :chat_market, ChatMarket.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false

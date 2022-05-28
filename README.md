@@ -52,7 +52,7 @@ For convenience, you can use the commands included in the Makefile:
 | `make format`                                                     | Format all phoenix files                              |
 
 
-# AppName
+# ChatMarket
 
 To start your Phoenix server:
 

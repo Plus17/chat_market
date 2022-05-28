@@ -36,10 +36,10 @@
           ~r"/deps/",
           ~r"/node_modules/",
           ~r"/test/support/",
-          "lib/app_name_web.ex",
-          "lib/app_name_web/telemetry.ex",
-          "lib/app_name/release.ex",
-          "lib/app_name/protocol_implementations.ex"
+          "lib/chat_market_web.ex",
+          "lib/chat_market_web/telemetry.ex",
+          "lib/chat_market/release.ex",
+          "lib/chat_market/protocol_implementations.ex"
         ]
       },
       #
@@ -111,8 +111,8 @@
          [
            files: %{
              excluded: [
-               "lib/app_name_web/controllers/user_auth.ex",
-               "lib/app_name/contexts/users/user_notifier.ex"
+               "lib/chat_market_web/controllers/user_auth.ex",
+               "lib/chat_market/contexts/users/user_notifier.ex"
              ]
            }
          ]},
@@ -179,7 +179,7 @@
          [
            files: %{
              excluded: [
-               "lib/app_name/contexts/users.ex",
+               "lib/chat_market/contexts/users.ex",
                "lib/release.ex"
              ]
            }
@@ -195,13 +195,13 @@
          [
            files: %{
              excluded: [
-               ~r"/lib/app_name_web/views/",
-               ~r"/lib/app_name_web/controllers/",
+               ~r"/lib/chat_market_web/views/",
+               ~r"/lib/chat_market_web/controllers/",
                ~r"/test/factories",
-               "lib/app_name/contexts/users/user.ex",
-               "lib/app_name/contexts/users/user_notifier.ex",
-               "lib/app_name/contexts/users.ex",
-               "lib/app_name/contexts/users/user_token.ex",
+               "lib/chat_market/contexts/users/user.ex",
+               "lib/chat_market/contexts/users/user_notifier.ex",
+               "lib/chat_market/contexts/users.ex",
+               "lib/chat_market/contexts/users/user_token.ex",
                "lib/release.ex"
              ]
            }
@@ -227,7 +227,7 @@
            files: %{
              excluded: [
                # exclude mix phx.gen.auth generated files
-               "lib/app_name_web/controllers/user_confirmation_controller.ex"
+               "lib/chat_market_web/controllers/user_confirmation_controller.ex"
              ]
            }
          ]},
@@ -238,13 +238,13 @@
            files: %{
              excluded: [
                # exclude mix phx.gen.auth generated files
-               "test/app_name/contexts/users_test.exs",
-               "test/app_name_web/controllers/user_settings_controller_test.exs",
-               "test/app_name_web/controllers/user_session_controller_test.exs",
-               "test/app_name_web/controllers/user_registration_controller_test.exs",
-               "test/app_name_web/controllers/user_confirmation_controller_test.exs",
-               "test/app_name_web/controllers/user_auth_test.exs",
-               "lib/app_name_web/controllers/user_confirmation_controller.ex"
+               "test/chat_market/contexts/users_test.exs",
+               "test/chat_market_web/controllers/user_settings_controller_test.exs",
+               "test/chat_market_web/controllers/user_session_controller_test.exs",
+               "test/chat_market_web/controllers/user_registration_controller_test.exs",
+               "test/chat_market_web/controllers/user_confirmation_controller_test.exs",
+               "test/chat_market_web/controllers/user_auth_test.exs",
+               "lib/chat_market_web/controllers/user_confirmation_controller.ex"
              ]
            }
          ]},

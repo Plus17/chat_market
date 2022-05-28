@@ -1,8 +1,8 @@
-defmodule AppName.Release do
+defmodule ChatMarket.Release do
   @moduledoc """
   Responsible for custom release commands
   """
-  @app :app_name
+  @app :chat_market
 
   def migrate do
     load_app()

@@ -1,9 +1,9 @@
-defmodule AppName.UserFactory do
+defmodule ChatMarket.UserFactory do
   @moduledoc """
   User factory to populate test data
   """
 
-  alias AppName.Contexts.Users.User
+  alias ChatMarket.Contexts.Users.User
 
   defmacro __using__(_opts) do
     quote do
