@@ -16,4 +16,16 @@ defmodule ChatMarket.Contexts.BlocksUsersManager do
     |> BlocksUsers.changeset(attrs)
     |> Repo.insert()
   end
+
+  def get(blocks_users_id) do
+    BlocksUsers
+    |> preload([:user, :block])
+    |> Repo.get!(blocks_users_id)
+  end
+
+  def update(%BlocksUsers{} = block_user, attrs) do
+    block_user
+    |> BlocksUsers.changeset(attrs)
+    |> Repo.update()
+  end
 end
