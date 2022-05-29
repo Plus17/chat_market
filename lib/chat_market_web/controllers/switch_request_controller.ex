@@ -25,42 +25,32 @@ defmodule ChatMarketWeb.SwitchRequestController do
   end
 
   def update(conn, %{"action_to_perform" => "accept"} = params) do
-    params |> IO.inspect(label: "PARAMS")
-
     with %SwitchRequest{} = switch_request <-
-           Requests.get_switch_request!(params["id"]) |> IO.inspect(label: "GET SWITCH REQUEST"),
+           Requests.get_switch_request!(params["id"]),
          %BlocksUsers{} = block_user_requester <-
-           BlocksUsersManager.get(switch_request.blocks_users_requester_id)
-           |> IO.inspect(label: "GET REQUESTER"),
+           BlocksUsersManager.get(switch_request.blocks_users_requester_id),
          %BlocksUsers{} = block_user_requested <-
-           BlocksUsersManager.get(switch_request.blocks_users_requested_id)
-           |> IO.inspect(label: "GET REQUESTED"),
+           BlocksUsersManager.get(switch_request.blocks_users_requested_id),
          {:ok, _updated_block_user_requester} <-
            BlocksUsersManager.update(block_user_requester, %{
              user_id: block_user_requested.user_id
-           })
-           |> IO.inspect(label: "UPDATE REQYESTED"),
+           }),
          {:ok, _updated_block_user_requested} <-
            BlocksUsersManager.update(block_user_requested, %{
              user_id: block_user_requester.user_id
-           })
-           |> IO.inspect(label: "UPDATED REQUESTER"),
+           }),
          {:ok, _updated_switch_request} <-
-           Requests.update_switch_request(switch_request, %{status: :accepted})
-           |> IO.inspect(label: "SWITCH") do
+           Requests.update_switch_request(switch_request, %{status: :accepted}) do
       redirect(conn, to: Routes.block_path(conn, :index))
     end
   end
 
   def update(conn, %{"action_to_perform" => "reject"} = params) do
-    params |> IO.inspect(label: "PARAMS")
-
     with %SwitchRequest{} = switch_request <-
-           Requests.get_switch_request!(params["id"]) |> IO.inspect(label: "GET REQUEST"),
+           Requests.get_switch_request!(params["id"]),
          {:ok, _updated_switch_request} <-
-           Requests.update_switch_request(switch_request, %{status: :rejected})
-           |> IO.inspect(label: "REJECT REQUEST") do
-      redirect(conn, to: Routes.block_path(conn, :index)) |> IO.inspect(label: "REDIRECT")
+           Requests.update_switch_request(switch_request, %{status: :rejected}) do
+      redirect(conn, to: Routes.block_path(conn, :index))
     end
   end
 end
