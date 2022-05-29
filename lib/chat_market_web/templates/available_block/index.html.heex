@@ -33,8 +33,8 @@
     <%= for block_user <- @blocks_users do %>
       <tr>
         <td class="py-4 font-poppins font-size-16 center"><%= block_user.user.email %></td>
-        <td class="py-4 font-poppins font-size-16 center"><%= block_user.block.start_at %></td>
-        <td class="py-4 font-poppins font-size-16 center"><%= block_user.block.end_at %></td>
+        <td class="py-4 font-poppins font-size-16 center"><%= Timex.format!(block_user.block.start_at, "%d de %b del %Y - %H:%M", :strftime) %></td>
+        <td class="py-4 font-poppins font-size-16 center"><%= Timex.format!(block_user.block.end_at, "%d de %b del %Y - %H:%M", :strftime) %></td>
         <td class="py-4 center">
           <%= if is_nil(@block_user_requester_id) do %>
             <p>Selecciona un bloque a cambiar</p>
