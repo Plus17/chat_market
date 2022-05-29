@@ -75,4 +75,7 @@ gettext:
 check.formatter:
 	docker-compose run --rm --no-deps phx sh -c "mix format --check-formatted"
 
+stop:
+	docker-compose stop
+
 .PHONY: test
