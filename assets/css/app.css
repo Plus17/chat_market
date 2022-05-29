@@ -112,9 +112,27 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.logo {
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-26 {
+  font-size: 26px;
+}
+
+.font-size-32 {
+  font-size: 32px;
+}
+
+#logo {
   width: 100%;
   max-width: 200px;
+  margin: 0 auto;
+}
+
+#calendar {
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -122,8 +140,25 @@
   text-align: center;
 }
 
+.btn-home {
+  background-color: #005ad6;
+  border-radius: 30px;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  height: 50px;
+  padding-top: 10px;
+  width: 220px;
+}
+
+.btn-home:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
 .btn-navbar {
   color: #757575;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   text-decoration: none;
 }
@@ -136,9 +171,27 @@
 
 .btn-change {
   background-color: #005ad6;
-  border-radius: 14px;
+  border-radius: 30px;
   color: #FFF;
-  font-size: 20px;
-  height: 44px;
-  width: 150px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  height: 50px;
+  width: 220px;
+}
+
+.btn-settings {
+  background-color: #005ad6;
+  border-radius: 30px;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  height: 50px;
+  width: 220px;
+}
+
+.center-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
 }
