@@ -7,7 +7,7 @@ defmodule ChatMarketWeb.UserRegistrationControllerTest do
       response = html_response(conn, 200)
       assert response =~ "Register"
       assert response =~ "Log in</a>"
-      assert response =~ "Register</a>"
+      assert response =~ "Registrarse</a>"
     end
 
     test "redirects if already logged in", %{conn: conn} do
@@ -33,8 +33,8 @@ defmodule ChatMarketWeb.UserRegistrationControllerTest do
       conn = get(conn, "/")
       response = html_response(conn, 200)
       assert response =~ email
-      assert response =~ "Settings</a>"
-      assert response =~ "Log out</a>"
+      assert response =~ "Configuración</a>"
+      assert response =~ "Salir</a>"
     end
 
     test "render errors for invalid data", %{conn: conn} do
