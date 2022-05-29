@@ -13,19 +13,19 @@
 
   <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div>
-      <%= label f, :email_actual, class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
+      <%= label f, :email, "Email actual", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
       <%= email_input f, :email, required: true, class: "form-control" %>
       <%= error_tag f, :email %>
     </div>
     <div>
-      <%= label f, :nuevo_email, for: "current_password_for_email", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
+      <%= label f, :current_password, "Nuevo email", for: "current_password_for_email", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
       <%= password_input f, :current_password, required: true, name: "current_password", id: "  il", class: "form-control" %>
       <%= error_tag f, :current_password %>
     </div>
   </div>
 
   <div class="flex justify-end mt-6">
-    <%= submit "Cambiar email", class: "btn btn-primary" %>
+    <%= submit "Cambiar email", class: "btn-change" %>
   </div>
 </.form>
 
@@ -42,6 +42,11 @@
 
   <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div>
+      <%= label f, :current_password, "Contraseña actual", for: "current_password_for_password", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
+      <%= password_input f, :current_password, required: true, name: "current_password", id: "current_password_for_password", class: "form-control" %>
+      <%= error_tag f, :current_password %>
+    </div>
+    <div>
       <%= label f, :password, "Nueva contraseña", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
       <%= password_input f, :password, required: true, class: "form-control" %>
       <%= error_tag f, :password %>
@@ -51,14 +56,9 @@
       <%= password_input f, :password_confirmation, required: true, class: "form-control" %>
       <%= error_tag f, :password_confirmation %>
     </div>
-    <div>
-      <%= label f, :current_password, for: "current_password_for_password", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
-      <%= password_input f, :current_password, required: true, name: "current_password", id: "current_password_for_password", class: "form-control" %>
-      <%= error_tag f, :current_password %>
-    </div>
   </div>
 
   <div class="flex justify-end mt-6">
-    <%= submit "Change password", class: "btn btn-primary" %>
+    <%= submit "Cambiar contraseña", class: "btn-change" %>
   </div>
 </.form>
