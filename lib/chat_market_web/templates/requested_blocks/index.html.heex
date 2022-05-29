@@ -21,8 +21,8 @@
     <tbody>
       <%= for requested_blocks <- @requested_blocks do %>
         <tr>
-          <td><%= requested_blocks.block.start_at %></td>
-          <td><%= requested_blocks.block.end_at %></td>
+          <td><%= Timex.format!(requested_blocks.block.start_at, "%d de %b del %Y - %H:%M", :strftime) %></td>
+          <td><%= Timex.format!(requested_blocks.block.end_at, "%d de %b del %Y - %H:%M", :strftime) %></td>
           <td><%= requested_blocks.requester.email %></td>
           <td>
             <span><%= link "Aceptar", to: Routes.block_path(@conn, :show, requested_blocks.block), data: [confirm: "Seguro que quieres cambiar el horario?"] %></span>
