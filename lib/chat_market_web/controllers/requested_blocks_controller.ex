@@ -1,7 +1,6 @@
 defmodule ChatMarketWeb.RequestedBlocksController do
   use ChatMarketWeb, :controller
 
-
   def index(conn, _params) do
     requested_blocks = []
 
