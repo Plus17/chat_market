@@ -19,7 +19,7 @@
         <a href="/" title="App Name Home Page" class="flex items-center text-xl text-base-content text-opacity-80">
           <img src="https://res.cloudinary.com/poluxhr/image/upload/v1653796975/samples/FIN/Logo_de_Fintual_kbwpk4.png" alt="Fintual logo" class="logo"/>
         </a>
-        <div class="flex items-center space-x-1">
+        <div class="flex space-x-1">
           <div class="hidden md:inline-flex space-x-1">
             <%= link "Home", to: Routes.page_path(@conn, :index), class: "btn btn-sm btn-link" %>
             <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
