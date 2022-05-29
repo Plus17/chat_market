@@ -29,6 +29,14 @@ defmodule ChatMarket.Blocks do
     |> Repo.all()
   end
 
+  def list_my_available_blocks(current_user_id) do
+    BlocksUsers
+    |> where([block], block.status == ^:available)
+    |> where([block], block.user_id == ^current_user_id)
+    |> preload([:user, :block])
+    |> Repo.all()
+  end
+
   def list_block_by_available(current_user_id) do
     BlocksUsers
     |> where([block], block.status == ^:available)
