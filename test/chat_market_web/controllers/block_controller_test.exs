@@ -4,8 +4,8 @@ defmodule ChatMarketWeb.BlockControllerTest do
   setup :register_and_log_in_user
 
   describe "index" do
-    test "lists all blocks", %{conn: conn} do
-      insert(:block)
+    test "lists all blocks", %{conn: conn, user: user} do
+      insert(:block_user, user: user)
       conn = get(conn, Routes.block_path(conn, :index))
       assert html_response(conn, 200) =~ "Listing Blocks"
     end

@@ -6,6 +6,8 @@ defmodule ChatMarket.Contexts.Users.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias ChatMarket.Block.BlocksUsers
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "users" do
@@ -13,6 +15,8 @@ defmodule ChatMarket.Contexts.Users.User do
     field :password, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
+
+    has_many :blocks_users, BlocksUsers
 
     timestamps()
   end

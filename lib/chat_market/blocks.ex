@@ -7,6 +7,7 @@ defmodule ChatMarket.Blocks do
   alias ChatMarket.Repo
 
   alias ChatMarket.Blocks.Block
+  alias ChatMarket.Block.BlocksUsers
 
   @doc """
   Returns the list of blocks.
@@ -21,8 +22,10 @@ defmodule ChatMarket.Blocks do
     Repo.all(Block)
   end
 
-  def list_block_by_user_id() do
-    Block
+  def list_block_by_user_id(user_id) do
+    BlocksUsers
+    |> where([b], b.user_id == ^user_id)
+    |> preload([:user, :block])
     |> Repo.all()
   end
 

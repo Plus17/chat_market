@@ -10,4 +10,5 @@ defmodule ChatMarket.Factory do
 
   use ChatMarket.UserFactory
   use ChatMarket.BlockFactory
+  use ChatMarket.BlocksUsersFactory
 end
