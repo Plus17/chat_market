@@ -118,6 +118,10 @@
   margin: 0 auto;
 }
 
+.center {
+  text-align: center;
+}
+
 .btn-change {
   background-color: #005ad6;
   border-radius: 14px;
