@@ -100,10 +100,4 @@ defmodule ChatMarketWeb.Router do
   scope "/health", log: false do
     forward "/", ChatMarketWeb.Plugs.HealthCheck
   end
-
-  scope "/api", ChatMarketWeb do
-    pipe_through :api
-
-    get("/consent", ConsentController, :consent)
-  end
 end

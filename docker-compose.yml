@@ -23,8 +23,6 @@ services:
       - DATABASE_URL=${DATABASE_URL}
       - PHX_URL_HOST=${PHX_URL_HOST}
       - HTTP_PORT=${HTTP_PORT:-4000}
-      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
-      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
     env_file:
       - .env
     working_dir: /app/src
