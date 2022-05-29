@@ -10,7 +10,7 @@ defmodule ChatMarketWeb.UserSessionControllerTest do
       conn = get(conn, Routes.user_session_path(conn, :new))
       response = html_response(conn, 200)
       assert response =~ "Ingresar"
-      assert response =~ "Register</a>"
+      assert response =~ "Registrarse</a>"
       assert response =~ "Forgot password?</a>"
     end
 
