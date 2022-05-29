@@ -25,8 +25,8 @@
           <td><%= requested_blocks.block.end_at %></td>
           <td><%= requested_blocks.requester.email %></td>
           <td>
-            <span><%= link "Aceptar", to: Routes.block_path(@conn, :show, requested_blocks.block) %></span>
-            <span><%= link "Rechazar", to: Routes.block_path(@conn, :show, requested_blocks.block) %></span>
+            <span><%= link "Aceptar", to: Routes.block_path(@conn, :show, requested_blocks.block), data: [confirm: "Seguro que quieres cambiar el horario?"] %></span>
+            <span><%= link "Rechazar", to: Routes.block_path(@conn, :show, requested_blocks.block), data: [confirm: "Seguro que quieres rechazar esta solicitud?"] %></span>
           </td>
         </tr>
       <% end %>
