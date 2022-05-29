@@ -1,6 +1,6 @@
-<h2 class="mt-5 text-lg font-poppins text-gray-700 dark:text-white">Configuración de la cuenta</h2>
+<h2 class="mt-5 text-lg font-poppins font-size-26 text-gray-700 dark:text-white">Configuración de la cuenta</h2>
 
-<h3 class="mt-4 font-poppins text-gray-700 dark:text-white">Cambiar email</h3>
+<h3 class="mt-4 font-poppins font-size-20 text-gray-700 dark:text-white">Cambiar email</h3>
 
 <.form let={f} for={@email_changeset} action={Routes.user_settings_path(@conn, :update)} id="update_email">
   <%= if @email_changeset.action do %>
@@ -25,11 +25,11 @@
   </div>
 
   <div class="flex justify-end mt-6">
-    <%= submit "Cambiar email", class: "btn-change" %>
+    <%= submit "Cambiar email", class: "btn-settings" %>
   </div>
 </.form>
 
-<h3 class="mt-4 font-poppins text-gray-700 dark:text-white">Cambiar contraseña</h3>
+<h3 class="mt-4 font-poppins font-size-20 text-gray-700 dark:text-white">Cambiar contraseña</h3>
 
 <.form let={f} for={@password_changeset} action={Routes.user_settings_path(@conn, :update)} id="update_password" class="mb-12">
   <%= if @password_changeset.action do %>
@@ -59,6 +59,6 @@
   </div>
 
   <div class="flex justify-end mt-6">
-    <%= submit "Cambiar contraseña", class: "btn-change" %>
+    <%= submit "Cambiar contraseña", class: "btn-settings" %>
   </div>
 </.form>
