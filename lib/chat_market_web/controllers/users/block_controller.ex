@@ -4,8 +4,8 @@ defmodule ChatMarketWeb.BlockController do
   alias ChatMarket.Blocks
 
   def index(conn, _params) do
-    blocks = Blocks.list_block_by_user_id(conn.assigns.current_user.id)
+    blocks_users = Blocks.list_block_by_user_id(conn.assigns.current_user.id)
 
-    render(conn, "index.html", blocks: blocks)
+    render(conn, "index.html", blocks_users: blocks_users)
   end
 end

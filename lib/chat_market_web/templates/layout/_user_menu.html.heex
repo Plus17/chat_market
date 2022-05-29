@@ -2,8 +2,10 @@
   ¡Hola <%= @current_user.email %>!
   <%= link "Configuración", to: Routes.user_settings_path(@conn, :edit), class: "ml-4 mr-3 btn-navbar" %>
   <%= link "Mis bloques", to: Routes.block_path(@conn, :index), class: "mx-3 btn-navbar" %>
+  <%= link "Bloques disponibles", to: Routes.available_block_path(@conn, :index), class: "mx-3 btn-navbar" %>
+  <%= link "Mis solicitudes", to: Routes.requested_blocks_path(@conn, :index), class: "mx-3 btn-navbar" %>
   <%= link "Salir", to: Routes.user_session_path(@conn, :delete),  class: "mx-3 btn-navbar", method: :delete %>
 <% else %>
-  <%= link "Registrarse", to: Routes.user_registration_path(@conn, :new), class: "mx-3 btn-navbar" %>
   <%= link "Ingresar", to: Routes.user_session_path(@conn, :new), class: "mx-3 btn-navbar" %>
+  <%= link "Registrarse", to: Routes.user_registration_path(@conn, :new), class: "mx-3 btn-navbar" %>
 <% end %>

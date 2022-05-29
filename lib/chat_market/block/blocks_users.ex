@@ -19,6 +19,7 @@ defmodule ChatMarket.Block.BlocksUsers do
 
   @required_fields [:user_id, :block_id]
   @optional_fields [:status]
+
   @doc false
   def changeset(blocks_users, attrs) do
     blocks_users

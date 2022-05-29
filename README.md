@@ -1,32 +1,13 @@
-## Content
+## Introduction
+Hello! We are Sergio, Mauricio and Cecilia, the Baltimore team!
 
-This boilerplate comes with batteries included, you’ll find:
+This is the project we developed in about 15 hours for the FIN hackathon in Mexico City.
 
-- [Phoenix](https://phoenixframework.org)
-- Database integration with [Ecto](https://github.com/elixir-ecto/ecto)
-- Translations with [Gettext](https://github.com/elixir-gettext/gettext)
-- Tests factories using [ExMachina](https://github.com/thoughtbot/ex_machina) and code coverage using [ExCoveralls](https://github.com/parroty/excoveralls)
-- CORS management with [CorsPlug](https://github.com/mschae/cors_plug)
-- Static code analysis with [Credo](https://github.com/rrrene/credo)
-- Releases using [`mix release`](https://hexdocs.pm/mix/Mix.Tasks.Release.html) and [Docker](https://www.docker.com)
+Our proposal is a platform that will allow Fintual's employees to switch their weekly chat shifts when they have a particular problem.
 
-
-## Configurations
-
-- warnings_as_errors: true
-
-## Useful libraries
-
-Here is an opinionated list of othe usefuel library's to consider:
-
-| Category                    | Libraries                                                                              |
-| --------------------------- | -------------------------------------------------------------------------------------- |
-| Authentication              | [`ueberauth`](https://github.com/ueberauth/ueberauth)                                  |
-| Emails                      | [`bamboo`](https://github.com/thoughtbot/bamboo), [`swoosh`](https://github.com/swoosh/swoosh) |
-| HTTP client                 | [`Tesla`](https://github.com/teamon/tesla)                                   |
-| Job processing              | ['Oban'](https://github.com/sorentwo/oban)
-| Pagination                  | [`Scrivener`](https://github.com/drewolson/scrivener)                                  |
-| Mocks                       | [`Mox`](https://github.com/dashbitco/mox), [`Mimic`](https://github.com/edgurgel/mimic)   |
+## Setup project
+git clone
+cd
 
 
 ## Development with Docker
@@ -54,7 +35,7 @@ For convenience, you can use the commands included in the Makefile:
 
 # ChatMarket
 
-To start your Phoenix server:
+To start your Chat Market server:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
@@ -63,11 +44,3 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
