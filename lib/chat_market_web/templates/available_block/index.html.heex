@@ -11,6 +11,7 @@
   <tbody>
     <%= for block_user <- @blocks_users do %>
       <tr>
+        <td><%= block_user.block.id %></td>
         <td><%= block_user.block.start_at %></td>
         <td><%= block_user.block.end_at %></td>
         <td><%= block_user.user.email %></td>
