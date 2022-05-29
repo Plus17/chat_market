@@ -25,14 +25,14 @@
     </div>
 
     <div class="mt-8">
-      <%= submit "Register", class: "btn btn-primary w-full" %>
+      <%= submit "Registrarse", class: "btn-settings center-form" %>
     </div>
   </.form>
 
   <div class="flex items-center justify-between mt-6">
     <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
 
-    <%= link "Or Log in", to: Routes.user_session_path(@conn, :new), class: "text-xs text-gray-500 dark:text-gray-400 uppercase hover:underline" %>
+    <%= link "O ingresa", to: Routes.user_session_path(@conn, :new), class: "text-xs text-gray-500 dark:text-gray-400 uppercase hover:underline" %>
 
     <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
   </div>
