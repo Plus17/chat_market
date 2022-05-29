@@ -29,7 +29,11 @@
   ChatMarket.Blocks.create_block(%{start_at: DateTime.utc_now(), end_at: DateTime.utc_now()})
 
 {:ok, _block_user} =
-  ChatMarket.Contexts.BlocksUsersManager.create(%{block_id: block_1.id, user_id: user.id, status: :available})
+  ChatMarket.Contexts.BlocksUsersManager.create(%{
+    block_id: block_1.id,
+    user_id: user.id,
+    status: :available
+  })
 
 {:ok, _block_user} =
   ChatMarket.Contexts.BlocksUsersManager.create(%{block_id: block_2.id, user_id: user.id})
@@ -43,9 +47,8 @@
 {:ok, _block_user} =
   ChatMarket.Contexts.BlocksUsersManager.create(%{block_id: block_5.id, user_id: user.id})
 
-
 {:ok, user_2} =
-ChatMarket.Contexts.Users.register_user(%{email: "test2@test.com", password: "soyunpassword"})
+  ChatMarket.Contexts.Users.register_user(%{email: "test2@test.com", password: "soyunpassword"})
 
 {:ok, block_6} =
   ChatMarket.Blocks.create_block(%{start_at: DateTime.utc_now(), end_at: DateTime.utc_now()})
