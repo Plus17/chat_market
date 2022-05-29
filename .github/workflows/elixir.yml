@@ -46,7 +46,5 @@ jobs:
       run: mix deps.get && mix deps.compile
     - name: Check Formatting
       run: mix format --check-formatted
-    - name: Check Creo
-      run: mix credo
     - name: Run tests
       run: mix test

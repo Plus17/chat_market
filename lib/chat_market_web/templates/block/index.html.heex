@@ -1,0 +1,24 @@
+<h1>Listing Blocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start at</th>
+      <th>End at</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for block <- @blocks do %>
+    <tr>
+      <td><%= block.block.start_at %></td>
+      <td><%= block.block.end_at %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.block_path(@conn, :show, block.block) %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
