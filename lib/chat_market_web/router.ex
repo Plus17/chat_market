@@ -79,6 +79,8 @@ defmodule ChatMarketWeb.Router do
     get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
 
     resources "/blocks", BlockController
+    get "/availables_blocks", AvailableBlockController, :index
+    get "/requested_blocks", RequestedBlocksController, :index
   end
 
   scope "/", ChatMarketWeb do

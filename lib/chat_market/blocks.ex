@@ -29,6 +29,13 @@ defmodule ChatMarket.Blocks do
     |> Repo.all()
   end
 
+  def list_block_by_available() do
+    BlocksUsers
+    |> where([block], block.status == ^:available)
+    |> preload([:user, :block])
+    |> Repo.all()
+  end
+
   @doc """
   Gets a single block.
 

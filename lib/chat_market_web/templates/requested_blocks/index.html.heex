@@ -1,0 +1,35 @@
+<div class="container d-flex justify-content-center py-5">
+  <div class="row">
+    <div class="col-12">
+        <h1 class="font-poppins">Bloques requeridos
+        <i class="fas fa-repeat" style="color: green;"></i>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Inicio</th>
+      <th scope="col">Termino</th>
+      <th scope="col">Usuario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tbody>
+      <%= for requested_blocks <- @requested_blocks do %>
+        <tr>
+          <td><%= requested_blocks.block.start_at %></td>
+          <td><%= requested_blocks.block.end_at %></td>
+          <td><%= requested_blocks.requester.email %></td>
+          <td>
+            <span><%= link "Aceptar", to: Routes.block_path(@conn, :show, requested_blocks.block) %></span>
+            <span><%= link "Rechazar", to: Routes.block_path(@conn, :show, requested_blocks.block) %></span>
+          </td>
+        </tr>
+      <% end %>
+  </tbody>
+  </tbody>
+</table>
