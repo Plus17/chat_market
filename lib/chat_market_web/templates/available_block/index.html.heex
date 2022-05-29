@@ -1,21 +1,33 @@
+<div class="container d-flex py-4">
+  <div class="row w-100">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <h2 class="font-poppins font-size-32">Bloques disponibles</h2>
+    </div>
+    <div class="col-1">
+        <i class="fas fa-repeat" style="color: #005ad6;"></i>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>
+
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Inicio</th>
-      <th scope="col">Termino</th>
-      <th scope="col">Persona</th>
-      <th scope="col"></th>
+      <th scope="col" class="font-poppins font-size-18 center">Persona</th>
+      <th scope="col" class="font-poppins font-size-18 center">Inicio</th>
+      <th scope="col" class="font-poppins font-size-18 center">Término</th>
+      <th scope="col" class="center"><i class="fas fa-repeat"></i></th>
     </tr>
   </thead>
   <tbody>
     <%= for block_user <- @blocks_users do %>
-      <tr>
-        <td><%= block_user.block.start_at %></td>
-        <td><%= block_user.block.end_at %></td>
-        <td><%= block_user.user.email %></td>
-        <td>
-          <span><%= link "Cambiar", to: Routes.block_path(@conn, :show, block_user.block) %></span>
+      <tr class="">
+        <td class="py-4 font-poppins font-size-16 center"><%= block_user.user.email %></td>
+        <td class="py-4 font-poppins font-size-16 center"><%= block_user.block.start_at %></td>
+        <td class="py-4 font-poppins font-size-16 center"><%= block_user.block.end_at %></td>
+        <td class="py-4 center">
+          <%= link "Cambiar", to: Routes.block_path(@conn, :show, block_user.block), class: "btn-change" %>
         </td>
       </tr>
     <% end %>

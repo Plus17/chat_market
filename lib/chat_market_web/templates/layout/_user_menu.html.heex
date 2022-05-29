@@ -1,7 +1,7 @@
 <%= if @current_user do %>
   ¡Hola <%= @current_user.email %>!
+  <%= link "Mis bloques", to: Routes.block_path(@conn, :index), class: "ml-4 mr-3 btn-navbar" %>
   <%= link "Configuración", to: Routes.user_settings_path(@conn, :edit), class: "ml-4 mr-3 btn-navbar" %>
-  <%= link "Mis bloques", to: Routes.block_path(@conn, :index), class: "mx-3 btn-navbar" %>
   <%= link "Salir", to: Routes.user_session_path(@conn, :delete),  class: "mx-3 btn-navbar", method: :delete %>
 <% else %>
   <%= link "Ingresar", to: Routes.user_session_path(@conn, :new), class: "mx-3 btn-navbar" %>
