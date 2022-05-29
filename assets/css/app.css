@@ -108,9 +108,21 @@
   margin: -1rem 0 2rem;
 }
 
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
 .btn-change {
   background-color: #005ad6;
-  border-radius: 20px;
+  border-radius: 14px;
   color: #FFF;
   font-size: 20px;
+  height: 44px;
+  width: 150px;
 }
