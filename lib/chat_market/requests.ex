@@ -41,7 +41,7 @@ defmodule ChatMarket.Requests do
     SwitchRequest
     |> where([request], request.requested_id == ^requested_id)
     |> where([request], request.status == ^:requested)
-    |> preload([blocks_users_requester: [:block, :user], blocks_users_requested: [:block]])
+    |> preload(blocks_users_requester: [:block, :user], blocks_users_requested: [:block])
     |> Repo.all()
   end
 

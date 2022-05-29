@@ -7,7 +7,7 @@ defmodule ChatMarket.Contexts.BlocksUsersManager do
 
   alias ChatMarket.Block.BlocksUsers
 
- # alias ChatMarket.Requests.SwitchRequest
+  # alias ChatMarket.Requests.SwitchRequest
 
   @doc """
   Creates a relationship beetwen blocks and users
