@@ -8,6 +8,8 @@ defmodule ChatMarket.Requests do
 
   alias ChatMarket.Requests.SwitchRequest
 
+  alias ChatMarket.Block.BlocksUsers
+
   @doc """
   Returns the list of switch_requests.
 
@@ -19,6 +21,28 @@ defmodule ChatMarket.Requests do
   """
   def list_switch_requests do
     Repo.all(SwitchRequest)
+  end
+
+  def create(%BlocksUsers{} = block_user_requester, %BlocksUsers{} = block_user_requested) do
+    switch_request_params = %{
+      status: :requested,
+      requester_id: block_user_requester.user.id,
+      requested_id: block_user_requested.user.id,
+      blocks_users_requester_id: block_user_requester.id,
+      blocks_users_requested_id: block_user_requested.id
+    }
+
+    %SwitchRequest{}
+    |> SwitchRequest.changeset(switch_request_params)
+    |> Repo.insert()
+  end
+
+  def get_by_requested_id(requested_id) do
+    SwitchRequest
+    |> where([request], request.requested_id == ^requested_id)
+    |> where([request], request.status == ^:requested)
+    |> preload([blocks_users_requester: [:block, :user], blocks_users_requested: [:block]])
+    |> Repo.all()
   end
 
   @doc """
