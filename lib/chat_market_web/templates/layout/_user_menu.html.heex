@@ -4,6 +4,6 @@
   <%= link "Mis bloques", to: Routes.block_path(@conn, :index), class: "mx-3 btn-navbar" %>
   <%= link "Salir", to: Routes.user_session_path(@conn, :delete),  class: "mx-3 btn-navbar", method: :delete %>
 <% else %>
-  <%= link "Registrarse", to: Routes.user_registration_path(@conn, :new), class: "mx-3 btn-navbar" %>
   <%= link "Ingresar", to: Routes.user_session_path(@conn, :new), class: "mx-3 btn-navbar" %>
+  <%= link "Registrarse", to: Routes.user_registration_path(@conn, :new), class: "mx-3 btn-navbar" %>
 <% end %>
