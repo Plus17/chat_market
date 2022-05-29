@@ -11,7 +11,7 @@ defmodule ChatMarketWeb.UserSessionControllerTest do
       response = html_response(conn, 200)
       assert response =~ "Ingresar"
       assert response =~ "Registrarse</a>"
-      assert response =~ "Forgot password?</a>"
+      assert response =~ "¿Olvidaste tu contraseña?</a>"
     end
 
     test "redirects if already logged in", %{conn: conn, user: user} do
