@@ -8,8 +8,8 @@
 
   <div class="flex items-center justify-between mt-6">
     <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-    <%= link "Registrarse", to: Routes.user_registration_path(@socket, :new), class: "btn-home" %>
     <%= link "Ingresar", to: Routes.user_session_path(@socket, :new), class: "btn-home" %>
+    <%= link "Registrarse", to: Routes.user_registration_path(@socket, :new), class: "btn-home" %>
     <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
   </div>
 </section>
