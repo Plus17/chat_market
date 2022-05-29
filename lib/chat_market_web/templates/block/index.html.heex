@@ -20,7 +20,7 @@
       <td><%= blocks_user.status %></td>
 
       <td>
-        <span><%= link "Cambiar", to: Routes.switch_request_path(@conn, :create, blocks_users_id: blocks_user),  method: :create, class: "btn-change" %></span>
+        <span><%= link "Cambiar", to: Routes.mark_block_path(@conn, :create, blocks_users_id: blocks_user),  method: :create, class: "btn-change" %></span>
       </td>
     </tr>
 <% end %>
