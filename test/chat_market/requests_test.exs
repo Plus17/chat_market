@@ -21,8 +21,8 @@ defmodule ChatMarket.RequestsTest do
     test "create_switch_request/1 with valid data creates a switch_request" do
       requester = insert(:user)
       requested = insert(:user)
-      block_user_requester  = insert(:block_user, user: requester)
-      block_user_requested  = insert(:block_user, user: requested)
+      block_user_requester = insert(:block_user, user: requester)
+      block_user_requested = insert(:block_user, user: requested)
 
       params = %{
         status: :requested,
@@ -44,13 +44,18 @@ defmodule ChatMarket.RequestsTest do
       switch_request = insert(:switch_request)
       update_attrs = %{status: :rejected}
 
-      assert {:ok, %SwitchRequest{} = switch_request} = Requests.update_switch_request(switch_request, update_attrs)
+      assert {:ok, %SwitchRequest{} = switch_request} =
+               Requests.update_switch_request(switch_request, update_attrs)
+
       assert switch_request.status == :rejected
     end
 
     test "update_switch_request/2 with invalid data returns error changeset" do
       switch_request = insert(:switch_request)
-      assert {:error, %Ecto.Changeset{}} = Requests.update_switch_request(switch_request, @invalid_attrs)
+
+      assert {:error, %Ecto.Changeset{}} =
+               Requests.update_switch_request(switch_request, @invalid_attrs)
+
       assert switch_request.id == Requests.get_switch_request!(switch_request.id).id
     end
 

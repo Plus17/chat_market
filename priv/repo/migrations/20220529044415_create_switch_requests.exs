@@ -5,8 +5,13 @@ defmodule ChatMarket.Repo.Migrations.CreateSwitchRequests do
     create table(:switch_requests, primary_key: false) do
       add :id, :binary_id, primary_key: true
       add :status, :string
-      add :blocks_users_requester_id, references(:blocks_users, on_delete: :nothing, type: :binary_id)
-      add :blocks_users_requested_id, references(:blocks_users, on_delete: :nothing, type: :binary_id)
+
+      add :blocks_users_requester_id,
+          references(:blocks_users, on_delete: :nothing, type: :binary_id)
+
+      add :blocks_users_requested_id,
+          references(:blocks_users, on_delete: :nothing, type: :binary_id)
+
       add :requester_id, references(:users, on_delete: :nothing, type: :binary_id)
       add :requested_id, references(:users, on_delete: :nothing, type: :binary_id)
 
