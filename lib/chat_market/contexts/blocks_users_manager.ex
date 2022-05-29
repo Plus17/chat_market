@@ -7,6 +7,8 @@ defmodule ChatMarket.Contexts.BlocksUsersManager do
 
   alias ChatMarket.Block.BlocksUsers
 
+  # alias ChatMarket.Requests.SwitchRequest
+
   @doc """
   Creates a relationship beetwen blocks and users
   """
@@ -15,5 +17,17 @@ defmodule ChatMarket.Contexts.BlocksUsersManager do
     %BlocksUsers{}
     |> BlocksUsers.changeset(attrs)
     |> Repo.insert()
+  end
+
+  def get(blocks_users_id) do
+    BlocksUsers
+    |> preload([:user, :block])
+    |> Repo.get!(blocks_users_id)
+  end
+
+  def update(%BlocksUsers{} = block_user, attrs) do
+    block_user
+    |> BlocksUsers.changeset(attrs)
+    |> Repo.update()
   end
 end

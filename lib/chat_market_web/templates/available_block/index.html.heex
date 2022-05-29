@@ -10,6 +10,15 @@
     <div class="col-3"></div>
   </div>
 </div>
+<%= form_for :block_user_requester, Routes.available_block_path(@conn, :index), fn _f -> %>
+  <select name='block_user_requester_id' id='my_blocks'>
+    <%= for available_block <- @current_user_available_blocks do %>
+    <option value={available_block.id}><%= available_block.block.start_at %></option>
+    <% end %>
+  </select>
+
+  <%= submit "Usar" %>
+<% end %>
 
 <table class="table">
   <thead>
@@ -22,12 +31,16 @@
   </thead>
   <tbody>
     <%= for block_user <- @blocks_users do %>
-      <tr class="">
+      <tr>
         <td class="py-4 font-poppins font-size-16 center"><%= block_user.user.email %></td>
         <td class="py-4 font-poppins font-size-16 center"><%= block_user.block.start_at %></td>
         <td class="py-4 font-poppins font-size-16 center"><%= block_user.block.end_at %></td>
         <td class="py-4 center">
-          <%= link "Cambiar", to: Routes.block_path(@conn, :show, block_user.block), class: "btn-change" %>
+          <%= if is_nil(@block_user_requester_id) do %>
+            <p>Selecciona un bloque a cambiar</p>
+          <% else %>
+            <span><%= link "Cambiar", to: Routes.switch_request_path(@conn, :create, block_user_requested_id: block_user.id, block_user_requester: @block_user_requester_id), method: :create, class: "btn-change" %></span>
+          <% end %>
         </td>
       </tr>
     <% end %>
