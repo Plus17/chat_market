@@ -18,11 +18,12 @@ defmodule ChatMarket.Block.BlocksUsers do
   end
 
   @required_fields [:user_id, :block_id]
+  @optional_fields [:status]
 
   @doc false
   def changeset(blocks_users, attrs) do
     blocks_users
-    |> cast(attrs, @required_fields)
+    |> cast(attrs, @required_fields ++ @optional_fields)
     |> validate_required(@required_fields)
     |> foreign_key_constraint(:block_id)
     |> foreign_key_constraint(:user_id)

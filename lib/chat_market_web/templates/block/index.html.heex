@@ -5,20 +5,22 @@
     <tr>
       <th>Start at</th>
       <th>End at</th>
+      <th>Estatus</th>
       <th>
-        <button class="btn-change">Cambiar</button>
+        Cambiar
       </th>
 
     </tr>
   </thead>
   <tbody>
-<%= for block <- @blocks do %>
+<%= for blocks_user <- @blocks_users do %>
     <tr>
-      <td><%= block.block.start_at %></td>
-      <td><%= block.block.end_at %></td>
+      <td><%= blocks_user.block.start_at %></td>
+      <td><%= blocks_user.block.end_at %></td>
+      <td><%= blocks_user.status %></td>
 
       <td>
-        <span><%= link "Show", to: Routes.block_path(@conn, :show, block.block) %></span>
+        <span><%= link "Cambiar", to: Routes.switch_request_path(@conn, :create, blocks_users_id: blocks_user),  method: :create, class: "btn-change" %></span>
       </td>
     </tr>
 <% end %>
