@@ -82,6 +82,7 @@ defmodule ChatMarketWeb.Router do
     post "/mark_block", MarkBlockController, :create
     post "/switch_request", SwitchRequestController, :create
     get "/availables_blocks", AvailableBlockController, :index
+    post "/availables_blocks", AvailableBlockController, :create
     get "/requested_blocks", RequestedBlocksController, :index
   end
 
