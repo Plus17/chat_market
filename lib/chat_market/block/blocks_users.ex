@@ -17,10 +17,14 @@ defmodule ChatMarket.Block.BlocksUsers do
     timestamps()
   end
 
+  @required_fields [:user_id, :block_id]
+
   @doc false
   def changeset(blocks_users, attrs) do
     blocks_users
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, @required_fields)
+    |> validate_required(@required_fields)
+    |> foreign_key_constraint(:block_id)
+    |> foreign_key_constraint(:user_id)
   end
 end
