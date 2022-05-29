@@ -9,7 +9,7 @@ defmodule ChatMarketWeb.UserSessionControllerTest do
     test "renders log in page", %{conn: conn} do
       conn = get(conn, Routes.user_session_path(conn, :new))
       response = html_response(conn, 200)
-      assert response =~ "Log in"
+      assert response =~ "Ingresar"
       assert response =~ "Register</a>"
       assert response =~ "Forgot password?</a>"
     end
@@ -73,7 +73,7 @@ defmodule ChatMarketWeb.UserSessionControllerTest do
         })
 
       response = html_response(conn, 200)
-      assert response =~ "Log in"
+      assert response =~ "Ingresar"
       assert response =~ "Invalid email or password"
     end
   end
