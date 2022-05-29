@@ -11,8 +11,8 @@ defmodule ChatMarket.BlocksTest do
     @invalid_attrs %{end_at: nil, start_at: nil}
 
     test "list_blocks/0 returns all blocks" do
-      block = block_fixture()
-      assert Blocks.list_blocks() == [block]
+      block_fixture()
+      assert [_block] = Blocks.list_blocks()
     end
 
     test "get_block!/1 returns the block with given id" do
