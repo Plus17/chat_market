@@ -79,3 +79,6 @@ stop:
 	docker-compose stop
 
 .PHONY: test
+
+shell.postgres:
+	docker-compose run --rm postgres bash
