@@ -107,3 +107,38 @@
   display: block;
   margin: -1rem 0 2rem;
 }
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn-navbar {
+  color: #757575;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn-navbar:hover {
+  background-color: #F5F5F5;
+  color: #005ad6;
+  text-decoration: none;
+}
+
+.btn-change {
+  background-color: #005ad6;
+  border-radius: 14px;
+  color: #FFF;
+  font-size: 20px;
+  height: 44px;
+  width: 150px;
+}

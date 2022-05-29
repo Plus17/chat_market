@@ -9,7 +9,7 @@ defmodule ChatMarketWeb.UserSettingsControllerTest do
     test "renders settings page", %{conn: conn} do
       conn = get(conn, Routes.user_settings_path(conn, :edit))
       response = html_response(conn, 200)
-      assert response =~ "Settings"
+      assert response =~ "Configuración"
     end
 
     test "redirects if user is not logged in" do
@@ -49,7 +49,7 @@ defmodule ChatMarketWeb.UserSettingsControllerTest do
         })
 
       response = html_response(old_password_conn, 200)
-      assert response =~ "Settings"
+      assert response =~ "Configuración"
       assert response =~ "should be at least 12 character(s)"
       assert response =~ "does not match password"
       assert response =~ "is not valid"
@@ -82,7 +82,7 @@ defmodule ChatMarketWeb.UserSettingsControllerTest do
         })
 
       response = html_response(conn, 200)
-      assert response =~ "Settings"
+      assert response =~ "Configuración"
       assert response =~ "must have the @ sign and no spaces"
       assert response =~ "is not valid"
     end

@@ -38,3 +38,6 @@ npm-debug.log
 /priv/static/cache_manifest.json
 
 .env
+
+# Ignore VSCode files
+.vscode/
