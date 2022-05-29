@@ -86,6 +86,7 @@ defmodule ChatMarket.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test --warnings-as-errors"],
+      seeds: ["run priv/repo/seeds.exs"],
       "assets.deploy": ["esbuild default --minify", "phx.digest"]
     ]
   end

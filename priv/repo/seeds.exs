@@ -9,3 +9,9 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+{:ok, _block} = ChatMarket.Blocks.create_block(%{start_at: DateTime.utc_now(), end_at: DateTime.utc_now()})
+{:ok, _block} = ChatMarket.Blocks.create_block(%{start_at: DateTime.utc_now(), end_at: DateTime.utc_now()})
+{:ok, _block} = ChatMarket.Blocks.create_block(%{start_at: DateTime.utc_now(), end_at: DateTime.utc_now()})
+{:ok, _block} = ChatMarket.Blocks.create_block(%{start_at: DateTime.utc_now(), end_at: DateTime.utc_now()})
+{:ok, _block} = ChatMarket.Blocks.create_block(%{start_at: DateTime.utc_now(), end_at: DateTime.utc_now()})
