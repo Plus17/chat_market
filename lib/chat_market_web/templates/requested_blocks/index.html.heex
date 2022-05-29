@@ -12,21 +12,20 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Inicio</th>
-      <th scope="col">Termino</th>
+      <th scope="col">Inicio Solicitante</th>
+      <th scope="col">Inicio Mia</th>
       <th scope="col">Usuario</th>
     </tr>
   </thead>
   <tbody>
     <tbody>
-      <%= for requested_blocks <- @requested_blocks do %>
+      <%= for requested_block <- @requested_blocks do %>
         <tr>
-          <td><%= requested_blocks.block.start_at %></td>
-          <td><%= requested_blocks.block.end_at %></td>
-          <td><%= requested_blocks.requester.email %></td>
+          <td><%= requested_block.blocks_users_requester.block.start_at %></td>
+          <td><%= requested_block.blocks_users_requested.block.start_at %></td>
+          <td><%= requested_block.blocks_users_requester.user.email %></td>
           <td>
-            <span><%= link "Aceptar", to: Routes.block_path(@conn, :show, requested_blocks.block), data: [confirm: "Seguro que quieres cambiar el horario?"] %></span>
-            <span><%= link "Rechazar", to: Routes.block_path(@conn, :show, requested_blocks.block), data: [confirm: "Seguro que quieres rechazar esta solicitud?"] %></span>
+
           </td>
         </tr>
       <% end %>
