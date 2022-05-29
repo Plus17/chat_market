@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-center py-5">
   <div class="row">
     <div class="col-12">
-        <h1 class="font-poppins">Bloques requeridos
+        <h1 class="font-poppins">Bloques  disponibles
         <i class="fas fa-repeat" style="color: green;"></i>
       </h1>
     </div>
@@ -12,21 +12,21 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Inicio</th>
-      <th scope="col">Termino</th>
+      <th scope="col">Inicio Solicitante</th>
+      <th scope="col">Inicio Mia</th>
       <th scope="col">Usuario</th>
     </tr>
   </thead>
   <tbody>
     <tbody>
-      <%= for requested_blocks <- @requested_blocks do %>
+      <%= for requested_block <- @requested_blocks do %>
         <tr>
-          <td><%= requested_blocks.block.start_at %></td>
-          <td><%= requested_blocks.block.end_at %></td>
-          <td><%= requested_blocks.requester.email %></td>
+          <td><%= requested_block.blocks_users_requester.block.start_at %></td>
+          <td><%= requested_block.blocks_users_requested.block.start_at %></td>
+          <td><%= requested_block.blocks_users_requester.user.email %></td>
           <td>
-            <span><%= link "Aceptar", to: Routes.block_path(@conn, :show, requested_blocks.block), data: [confirm: "Seguro que quieres cambiar el horario?"] %></span>
-            <span><%= link "Rechazar", to: Routes.block_path(@conn, :show, requested_blocks.block), data: [confirm: "Seguro que quieres rechazar esta solicitud?"] %></span>
+            <span><%= link "Aceptar", to: Routes.switch_request_path(@conn, :update, requested_block, action_to_perform: "accept"), method: :update, data: [confirm: "Seguro que quieres cambiar el horario?"] %></span>
+            <span><%= link "Rechazar", to: Routes.switch_request_path(@conn, :update, requested_block, action_to_perform: "reject"), method: :update, data: [confirm: "Seguro que quieres rechazar esta solicitud?"] %></span>
           </td>
         </tr>
       <% end %>
