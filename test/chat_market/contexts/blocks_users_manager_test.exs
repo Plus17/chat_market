@@ -1,7 +1,7 @@
 defmodule ChatMarket.Contexts.BlocksUsersManagerTest do
-	use ChatMarket.DataCase, async: true
+  use ChatMarket.DataCase, async: true
 
-	alias ChatMarket.Contexts.BlocksUsersManager
+  alias ChatMarket.Contexts.BlocksUsersManager
 
   test "create/1 with rigth" do
     user = insert(:user)
