@@ -11,7 +11,7 @@
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   </head>
   <body class="flex flex-col h-full pt-24 text-base-content">
     <header class="fixed top-0 left-0 right-0 z-30 px-2 py-4 shadow bg-base-100 sm:px-4">
@@ -21,7 +21,7 @@
         </a>
         <div class="flex space-x-1">
           <div class="hidden md:inline-flex space-x-1">
-            <%= link "Inicio", to: Routes.page_path(@conn, :index), class: "btn-link" %>
+            <%= link "Inicio", to: Routes.page_path(@conn, :index), class: "mx-4 btn-navbar" %>
           </div>
           <%= render "_user_menu.html", assigns %>
           <div class="inline-flex md:hidden" x-data="{ open: false }">

@@ -122,6 +122,18 @@
   text-align: center;
 }
 
+.btn-navbar {
+  color: #757575;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn-navbar:hover {
+  background-color: #F5F5F5;
+  color: #005ad6;
+  text-decoration: none;
+}
+
 .btn-change {
   background-color: #005ad6;
   border-radius: 14px;
