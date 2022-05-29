@@ -15,8 +15,8 @@
   <tbody>
 <%= for blocks_user <- @blocks_users do %>
     <tr>
-      <td><%= blocks_user.block.start_at %></td>
-      <td><%= blocks_user.block.end_at %></td>
+      <td><%= Timex.format!(blocks_user.block.start_at, "%d de %b del %Y - %H:%M", :strftime) %></td>
+      <td><%= Timex.format!(blocks_user.block.end_at, "%d de %b del %Y - %H:%M", :strftime) %></td>
       <td><%= blocks_user.status %></td>
 
       <td>
