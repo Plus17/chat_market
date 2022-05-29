@@ -8,13 +8,13 @@
   <% end %>
 
   <div class="mt-4">
-    <%= label f, :password, "New password", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
+    <%= label f, :password, "Nueva contraseña", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
     <%= password_input f, :password, required: true, class: "form-control" %>
     <%= error_tag f, :password %>
   </div>
 
   <div class="mt-4">
-    <%= label f, :password_confirmation, "Confirm new password", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
+    <%= label f, :password_confirmation, "Confirma tu nueva contraseña", class: "block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2" %>
     <%= password_input f, :password_confirmation, required: true, class: "form-control" %>
     <%= error_tag f, :password_confirmation %>
   </div>
