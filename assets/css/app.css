@@ -224,6 +224,10 @@
 
 /* Tables */
 
+.icon {
+  font-size: 30px;
+}
+
 tr {
   border: #F5F5F5 2px solid;
   height: 50px;

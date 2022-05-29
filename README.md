@@ -1,34 +1,3 @@
-## Content
-
-This boilerplate comes with batteries included, you’ll find:
-
-- [Phoenix](https://phoenixframework.org)
-- Database integration with [Ecto](https://github.com/elixir-ecto/ecto)
-- Translations with [Gettext](https://github.com/elixir-gettext/gettext)
-- Tests factories using [ExMachina](https://github.com/thoughtbot/ex_machina) and code coverage using [ExCoveralls](https://github.com/parroty/excoveralls)
-- CORS management with [CorsPlug](https://github.com/mschae/cors_plug)
-- Static code analysis with [Credo](https://github.com/rrrene/credo)
-- Releases using [`mix release`](https://hexdocs.pm/mix/Mix.Tasks.Release.html) and [Docker](https://www.docker.com)
-
-
-## Configurations
-
-- warnings_as_errors: true
-
-## Useful libraries
-
-Here is an opinionated list of othe usefuel library's to consider:
-
-| Category                    | Libraries                                                                              |
-| --------------------------- | -------------------------------------------------------------------------------------- |
-| Authentication              | [`ueberauth`](https://github.com/ueberauth/ueberauth)                                  |
-| Emails                      | [`bamboo`](https://github.com/thoughtbot/bamboo), [`swoosh`](https://github.com/swoosh/swoosh) |
-| HTTP client                 | [`Tesla`](https://github.com/teamon/tesla)                                   |
-| Job processing              | ['Oban'](https://github.com/sorentwo/oban)
-| Pagination                  | [`Scrivener`](https://github.com/drewolson/scrivener)                                  |
-| Mocks                       | [`Mox`](https://github.com/dashbitco/mox), [`Mimic`](https://github.com/edgurgel/mimic)   |
-
-
 ## Development with Docker
 
 ### Makefile
